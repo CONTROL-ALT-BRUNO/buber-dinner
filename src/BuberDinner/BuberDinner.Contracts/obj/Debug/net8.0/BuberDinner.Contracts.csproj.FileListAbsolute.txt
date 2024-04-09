@@ -1,0 +1,12 @@
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.deps.json
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.dll
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.pdb
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfoInputs.cache
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfo.cs
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.csproj.CoreCompileInputs.cache
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.sourcelink.json
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.dll
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/refint/BuberDinner.Contracts.dll
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.pdb
+/home/bruno/src/buber-dinner/src/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/ref/BuberDinner.Contracts.dll
