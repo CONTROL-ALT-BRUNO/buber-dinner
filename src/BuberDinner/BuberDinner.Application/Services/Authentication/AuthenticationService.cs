@@ -2,7 +2,7 @@ namespace BuberDinner.Application.Services.Authentication;
 
 public class AuthenticationService : IAuthenticationService
 {
-    public AuthenticationResult Login(string email,string password)
+    public AuthenticationResult Login(string email, string password)
     {
         return new AuthenticationResult(Guid.NewGuid(), "John", "Doe", email, "token");
     }
