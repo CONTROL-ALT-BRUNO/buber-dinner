@@ -14,8 +14,12 @@ public class AuthenticationController(IAuthenticationService authenticationServi
         AuthenticationResult authResult = authenticationService.Register(request.FirstName, request.LastName,
         request.Email, request.Password);
 
-        AuthenticationResponse response = new AuthenticationResponse(authResult.Id, authResult.FirstName,
-        authResult.LastName, authResult.Email, authResult.Token);
+        AuthenticationResponse response = new AuthenticationResponse(
+            authResult.User.Id,
+            authResult.User.FirstName,
+            authResult.User.LastName,
+            authResult.User.Email,
+            authResult.Token);
 
         return Ok(response);
     }
@@ -25,8 +29,12 @@ public class AuthenticationController(IAuthenticationService authenticationServi
     {
         AuthenticationResult authResult = authenticationService.Login(request.Email, request.Password);
 
-        AuthenticationResponse response = new AuthenticationResponse(authResult.Id, authResult.FirstName,
-        authResult.LastName, authResult.Email, authResult.Token);
+        AuthenticationResponse response = new AuthenticationResponse(
+            authResult.User.Id,
+            authResult.User.FirstName,
+            authResult.User.LastName,
+            authResult.User.Email,
+            authResult.Token);
 
         return Ok(response);
     }
