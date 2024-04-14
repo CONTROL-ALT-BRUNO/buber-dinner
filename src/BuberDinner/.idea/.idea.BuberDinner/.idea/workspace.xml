@@ -8,7 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40e4ca4d-1721-4991-b470-b4bccc3b903f" name="Changes" comment="" />
+    <list default="true" id="40e4ca4d-1721-4991-b470-b4bccc3b903f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BuberDinner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuberDinner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Controllers/ErrorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Controllers/ErrorController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +65,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22336884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20620313" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -146,6 +150,7 @@
       <updated>1713014553730</updated>
       <workItem from="1713014555120" duration="852000" />
       <workItem from="1713015411879" duration="2279000" />
+      <workItem from="1713128112177" duration="1146000" />
     </task>
     <servers />
   </component>
