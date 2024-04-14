@@ -4,10 +4,10 @@ namespace BuberDinner.Application.Common.Interfaces.Persistance
 {
     public interface IUserRepository
     {
-        User? GetUserByEmailAsync(string email);
-        User? GetUserByIdAsync(Guid id);
-        User CreateUserAsync(User user);
-        User UpdateUserAsync(User user);
-        bool DeleteUserAsync(Guid id);
+        User? GetUserByEmail(string email);
+        User? GetUserById(Guid id);
+        User CreateUser(User user);
+        User UpdateUser(User user);
+        bool DeleteUser(Guid id);
     }
 }

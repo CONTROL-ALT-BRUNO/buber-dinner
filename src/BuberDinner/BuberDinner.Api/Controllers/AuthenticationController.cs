@@ -1,31 +1,39 @@
 using BubeerDinner.Api.Controllers;
-using BuberDinner.Application.Services.Authentication;
+using BuberDinner.Application.Authentication.Commands.Register;
+using BuberDinner.Application.Authentication.Common;
+using BuberDinner.Application.Authentication.Queries.Login;
 using BuberDinner.Contracts.Authentication;
 using ErrorOr;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers;
 
 [Route("auth")]
-public class AuthenticationController(IAuthenticationService authenticationService) : ApiController
+public class AuthenticationController(ISender mediator) : ApiController
 {
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request) =>
-        authenticationService.Register(
+    public async Task<IActionResult> Register(RegisterRequest request)
+    {
+        RegisterCommand command = new RegisterCommand(
             request.FirstName,
             request.LastName,
             request.Email,
-            request.Password)
-            .Match(
-                authResult => Ok(MapAuthenticationResult(authResult)),
-                errors => Problem(errors));
+            request.Password);
+
+        ErrorOr<AuthenticationResult> authResult = await mediator.Send(command);
+
+        return authResult.Match(
+            authResult => Ok(MapAuthenticationResult(authResult)),
+            errors => Problem(errors));
+    }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        ErrorOr<AuthenticationResult> authResult = authenticationService.Login(
-            request.Email,
-            request.Password);
+        LoginQuery command = new LoginQuery(request.Email, request.Password);
+
+        ErrorOr<AuthenticationResult> authResult = await mediator.Send(command);
 
         if (authResult.IsError && authResult.FirstError == Domain.Common.Errors.Errors.Authentication.InvalidCredentials)
             return Problem(statusCode: StatusCodes.Status401Unauthorized, title: authResult.FirstError.Description);

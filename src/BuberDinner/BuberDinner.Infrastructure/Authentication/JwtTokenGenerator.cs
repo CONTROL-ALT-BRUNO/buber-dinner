@@ -17,15 +17,15 @@ public class JwtTokenGenerator(
     {
         SigningCredentials signingCredentials = new SigningCredentials(
             new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(jwtOptions.Value.Secret)
+                Encoding.UTF8.GetBytes(jwtOptions.Value.Secret ?? string.Empty)
             ), 
             SecurityAlgorithms.HmacSha256);
 
         List<Claim> claims = new List<Claim>()
         {
             new Claim(JwtRegisteredClaimNames.Sub, $"{user.FirstName} {user.LastName}"),
-            new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
-            new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
+            new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName ?? string.Empty),
+            new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName ?? string.Empty),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim(JwtRegisteredClaimNames.UniqueName, user.Id.ToString())
         };

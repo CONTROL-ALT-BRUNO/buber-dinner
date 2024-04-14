@@ -7,13 +7,13 @@ public class UserRepository : IUserRepository
 {
     private static readonly List<User> users = new List<User>();
 
-    public User CreateUserAsync(User user)
+    public User CreateUser(User user)
     {
         users.Add(user);
         return user;
     }
 
-    public bool DeleteUserAsync(Guid id)
+    public bool DeleteUser(Guid id)
     {
         User? user = users.Find(u => u.Id == id);
 
@@ -24,17 +24,17 @@ public class UserRepository : IUserRepository
         return true;
     }
 
-    public User? GetUserByEmailAsync(string email)
+    public User? GetUserByEmail(string email)
     {
         return users.FirstOrDefault(u => u.Email == email);
     }
 
-    public User? GetUserByIdAsync(Guid id)
+    public User? GetUserById(Guid id)
     {
         return users.Find(u => u.Id == id);
     }
 
-    public User UpdateUserAsync(User user)
+    public User UpdateUser(User user)
     {
         int index = users.FindIndex(u => u.Id == user.Id);
         users[index] = user;
