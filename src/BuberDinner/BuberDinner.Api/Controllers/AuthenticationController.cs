@@ -6,11 +6,13 @@ using BuberDinner.Application.Authentication.Queries.Login;
 using BuberDinner.Contracts.Authentication;
 using ErrorOr;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers;
 
-[Route("auth")]
+[Route("[controller]")]
+[AllowAnonymous]
 public class AuthenticationController(ISender mediator) : ApiController
 {
     [HttpPost("register")]
