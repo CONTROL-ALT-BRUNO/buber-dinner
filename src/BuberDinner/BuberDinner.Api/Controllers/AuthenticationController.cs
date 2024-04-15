@@ -1,4 +1,3 @@
-using BubeerDinner.Api.Controllers;
 using BuberDinner.Api.Common.Mappings;
 using BuberDinner.Application.Authentication.Commands.Register;
 using BuberDinner.Application.Authentication.Common;

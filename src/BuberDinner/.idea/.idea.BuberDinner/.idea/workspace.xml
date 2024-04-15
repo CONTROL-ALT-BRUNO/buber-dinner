@@ -9,9 +9,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40e4ca4d-1721-4991-b470-b4bccc3b903f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BuberDinner.Domain/Menu/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BuberDinner/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuberDinner/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BuberDinner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuberDinner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Common/Errors/BuberDinnerProblemDetailsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Common/Errors/BuberDinnerProblemDetailsFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Controllers/ApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Controllers/ApiController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Controllers/ErrorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Controllers/ErrorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Controllers/DinnersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Controllers/DinnersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/Authentication/Commands/Register/RegisterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/Authentication/Commands/Register/RegisterCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/Authentication/Common/AuthenticationResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/Authentication/Common/AuthenticationResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/Authentication/Queries/Login/LoginQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/Authentication/Queries/Login/LoginQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/Common/Behaviors/ValidationBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/Common/Behaviors/ValidationBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/Common/Interfaces/Authentication/IJwtTokenGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/Common/Interfaces/Authentication/IJwtTokenGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/Common/Interfaces/Persistance/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/Common/Interfaces/Persistance/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Application/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Domain/BuberDinner.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Domain/BuberDinner.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Domain/Entities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Domain/Common/User/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Infrastructure/Authentication/JwtTokenGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Infrastructure/Authentication/JwtTokenGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuberDinner.Infrastructure/Persistance/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BuberDinner.Infrastructure/Persistance/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Api.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Requests/Authentication/Login.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Requests/Authentication/Register.http" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +71,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTTP Request&quot;
+    ],
     &quot;rider.external.source.directories&quot;: [
       &quot;/home/bruno/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
       &quot;/home/bruno/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
@@ -60,37 +83,39 @@
 }</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
-      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
       <window_info id="Merge Requests" show_stripe_button="false" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20620313" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21875" />
       <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Bookmarks" order="2" side_tool="true" weight="0.27930582" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" show_stripe_button="false" />
       <window_info anchor="bottom" id="Dynamic Program Analysis" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" show_stripe_button="false" />
       <window_info anchor="bottom" id="dotTrace Profiler" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
-      <window_info anchor="bottom" id="NuGet" show_stripe_button="false" />
       <window_info anchor="bottom" id="dotMemory Profiler" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.33033788" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.33033788" />
-      <window_info anchor="bottom" id="Services" order="5" weight="0.33033788" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.33033788" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.33033788" />
+      <window_info anchor="bottom" id="Services" order="4" weight="0.33033788" />
+      <window_info anchor="bottom" id="Build" order="5" weight="0.33033788" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.33033788" />
+      <window_info anchor="bottom" id="Unit Tests" order="5" weight="0.33033788" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.33033788" />
+      <window_info anchor="bottom" id="NuGet" order="5" weight="0.33033788" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.33033788" />
       <window_info anchor="right" id="Unit Tests Coverage" show_stripe_button="false" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="IL Viewer" show_stripe_button="false" />
       <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.30479681" />
-      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.3297315" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="Monitoring" order="5" weight="0.33011326" />
@@ -151,6 +176,8 @@
       <workItem from="1713014555120" duration="852000" />
       <workItem from="1713015411879" duration="2279000" />
       <workItem from="1713128112177" duration="1146000" />
+      <workItem from="1713143629007" duration="2228000" />
+      <workItem from="1713148742569" duration="1138000" />
     </task>
     <servers />
   </component>
@@ -158,6 +185,17 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

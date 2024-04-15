@@ -1,5 +1,4 @@
-﻿using BubeerDinner.Api.Controllers;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers;
 
