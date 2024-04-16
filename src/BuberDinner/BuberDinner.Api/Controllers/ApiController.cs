@@ -16,9 +16,9 @@ public class ApiController : ControllerBase
             return ValidationProblem(errors);
 
         HttpContext.Items[HttpContextItemKeys.Errors] = errors;
-        
+
         Error firstError = errors.First();
-        
+
         int statusCode = firstError.Type switch
         {
             ErrorType.Validation => StatusCodes.Status400BadRequest,

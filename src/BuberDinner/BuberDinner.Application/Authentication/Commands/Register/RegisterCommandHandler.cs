@@ -7,9 +7,7 @@ using MediatR;
 
 namespace BuberDinner.Application.Authentication.Commands.Register;
 
-public class RegisterCommandHandler(
-    IJwtTokenGenerator tokenGenerator,
-    IUserRepository userRepository) : IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
+public class RegisterCommandHandler(IJwtTokenGenerator tokenGenerator, IUserRepository userRepository) : IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
 {
     public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {

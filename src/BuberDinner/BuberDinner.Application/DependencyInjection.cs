@@ -1,8 +1,5 @@
 using System.Reflection;
-using BuberDinner.Application.Authentication.Commands.Register;
-using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Common.Behaviors;
-using ErrorOr;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;

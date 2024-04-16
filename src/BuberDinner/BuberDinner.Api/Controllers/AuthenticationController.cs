@@ -15,18 +15,14 @@ namespace BuberDinner.Api.Controllers;
 public class AuthenticationController(ISender mediator) : ApiController
 {
     [HttpPost("register")]
-    public async Task<IActionResult> Register(RegisterRequest request) =>
-        await mediator
-            .Send(new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password))
-            .Match(value => Ok(value.ToAuthenticationResponse()), error => Problem(error));
+    public async Task<IActionResult> Register(RegisterRequest request) => await mediator.Send(new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password)).Match(value => Ok(value.ToAuthenticationResponse()), error => Problem(error));
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
         ErrorOr<AuthenticationResult> authResult = await mediator.Send(new LoginQuery(request.Email, request.Password));
 
-        if (authResult.IsError &&
-            authResult.FirstError == Domain.Common.Errors.Errors.Authentication.InvalidCredentials)
+        if (authResult.IsError && authResult.FirstError == Domain.Common.Errors.Errors.Authentication.InvalidCredentials)
             return Problem(statusCode: StatusCodes.Status401Unauthorized, title: authResult.FirstError.Description);
 
         return authResult.Match(value => Ok(value.ToAuthenticationResponse()), error => Problem(error));
