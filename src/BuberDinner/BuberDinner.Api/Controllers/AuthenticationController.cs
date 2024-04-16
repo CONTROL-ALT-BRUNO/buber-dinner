@@ -15,7 +15,8 @@ namespace BuberDinner.Api.Controllers;
 public class AuthenticationController(ISender mediator) : ApiController
 {
     [HttpPost("register")]
-    public async Task<IActionResult> Register(RegisterRequest request) => await mediator.Send(new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password)).Match(value => Ok(value.ToAuthenticationResponse()), error => Problem(error));
+    public async Task<IActionResult> Register(RegisterRequest request) 
+        => await mediator.Send(new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password)).Match(value => Ok(value.ToAuthenticationResponse()), error => Problem(error));
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)

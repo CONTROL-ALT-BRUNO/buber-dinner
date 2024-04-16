@@ -7,7 +7,9 @@ using MediatR;
 
 namespace BuberDinner.Application.Authentication.Queries.Login;
 
-public class LoginQueryHandler(IJwtTokenGenerator tokenGenerator, IUserRepository userRepository) : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
+public class LoginQueryHandler(
+    IJwtTokenGenerator tokenGenerator,
+    IUserRepository userRepository) : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
 {
     public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery command, CancellationToken cancellationToken)
     {
