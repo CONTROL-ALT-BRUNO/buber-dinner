@@ -1,7 +1,7 @@
+using BuberDinner.Domain.Base;
 using BuberDinner.Domain.Common.ValueObjects;
-using BuberDinner.Domain.Models;
 
-namespace BuberDinner.Domain.Common.Models;
+namespace BuberDinner.Domain.Common.ValueObjects;
 
 public sealed class AverageRating : ValueObject
 {

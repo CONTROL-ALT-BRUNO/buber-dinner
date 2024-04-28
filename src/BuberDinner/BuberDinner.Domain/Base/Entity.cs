@@ -1,6 +1,4 @@
-using System.Runtime.InteropServices;
-
-namespace BuberDinner.Domain.Common.Models;
+namespace BuberDinner.Domain.Base;
 
 public abstract class Entity<TId>(TId id) : IEquatable<Entity<TId>> where TId : notnull
 {

@@ -1,5 +1,4 @@
-using System.Reflection.Metadata.Ecma335;
-using BuberDinner.Domain.Models;
+using BuberDinner.Domain.Base;
 
 namespace BuberDinner.Domain.Menu.ValueObjects;
 

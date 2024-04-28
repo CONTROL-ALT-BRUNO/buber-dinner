@@ -1,11 +1,11 @@
 using BuberDinner.Application.Common.Interfaces.Persistance;
-using BuberDinner.Domain.Common.User;
+using BuberDinner.Domain.User;
 
 namespace BuberDinner.Infrastructure.Persistance;
 
 public class UserRepository : IUserRepository
-{
-    private static readonly List<User> users = new List<User>();
+    {
+        private static readonly List<User> users = new List<User>();
 
     public User CreateUser(User user)
     {
@@ -15,12 +15,12 @@ public class UserRepository : IUserRepository
 
     public bool DeleteUser(Guid id)
     {
-        User? user = users.Find(u => u.Id == id);
+        // User? user = users.Find(u => u.Id == id);
 
-        if (user is null)
-            return false;
+        // if (user is null)
+        //     return false;
 
-        users.Remove(user);
+        // users.Remove(user);
         return true;
     }
 
@@ -31,7 +31,8 @@ public class UserRepository : IUserRepository
 
     public User? GetUserById(Guid id)
     {
-        return users.Find(u => u.Id == id);
+        // return users.Find(u => u.Id == id);
+        return null;
     }
 
     public User UpdateUser(User user)

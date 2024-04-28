@@ -7,7 +7,7 @@ public static class AuthenticationResponseMapping
 {
     public static AuthenticationResponse ToAuthenticationResponse(this AuthenticationResult authResult) =>
         new AuthenticationResponse(
-            authResult.User.Id,
+            authResult.User.Id.Value,
             authResult.User.FirstName ?? string.Empty,
             authResult.User.LastName ?? string.Empty,
             authResult.User.Email ?? string.Empty,
